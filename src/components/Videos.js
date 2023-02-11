@@ -15,8 +15,8 @@ const Videos = () => {
   const [videoSrc, setVideoSrc] = useState(videosArr[0]);
 
   return (
-    <Stack direction={['column', 'row']} h={'100vh'}>
-      <VStack w={'container.lg'} ml="4" mt={'4'}>
+    <Stack h={['100%', '100vh']} direction={['column', 'row']}>
+      <VStack w={['100%', 'container.lg']} ml={['0', '16']} mt={'16'}>
         <video
           controls
           controlsList="nodownload"
@@ -26,7 +26,7 @@ const Videos = () => {
           }}
         ></video>
 
-        <VStack alignItems={'flex-start'} p={'8'} w={'full'} overflowY={'auto'}>
+        <VStack alignItems={'flex-start'} p={'8'} overflowY={'auto'}>
           <Heading>Sample Video 1</Heading>
           <Text>
             This is a sample video for testing and demo. This is called
@@ -34,12 +34,13 @@ const Videos = () => {
           </Text>
         </VStack>
       </VStack>
-      <VStack
-        w={['full', 'xl']}
-        alignItems={'stretch'}
-        p="8"
-        spacing={'8'}
-        overflowY={'auto'}
+      <Stack
+        w={['100%', 'xl']}
+        alignItems={['center', 'stretch']}
+        p={['4', '16']}
+        spacing={['10', '8']}
+        overflow={'scroll'}
+        direction={['row', 'column']}
       >
         {videosArr.map((item, index) => (
           <Button
@@ -50,7 +51,7 @@ const Videos = () => {
             Lecture {index + 1}
           </Button>
         ))}
-      </VStack>
+      </Stack>
     </Stack>
   );
 };
