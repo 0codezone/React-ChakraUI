@@ -8,11 +8,15 @@ const ColorModeSwitcher = props => {
   return (
     <div>
       <IconButton
-        variant="ghost"
-        color={'current'}
-        pos="fixed"
-        top={4}
+        zIndex={'10'}
+        pos={'fixed'}
+        top="4"
         right={4}
+        colorScheme={'purple'}
+        h="10"
+        w={'10'}
+        p="0"
+        borderRadius={'full'}
         onClick={toggleColorMode}
         icon={<SwitchIcon />}
         {...props}

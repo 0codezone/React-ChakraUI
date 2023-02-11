@@ -20,6 +20,7 @@ function Header() {
   return (
     <>
       <Button
+        zIndex={'10'}
         pos={'fixed'}
         top="4"
         left="4"
